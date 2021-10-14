@@ -1,0 +1,57 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top right,#560bad,#7209b7, #f72585);
+    overflow: hidden;
+    position: relative;
+    background-size: 200% 200%;
+    animation: gradient 3s infinite;
+}
+
+.container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.ball1, .ball2, .ball3, .ball4{
+    width: 25px;
+    height: 25px;
+    background: navajowhite;
+    border-radius: 100px;
+    /* animation: mantul 1s infinite; */
+}
+.ball1{
+    animation: mantul 1s infinite;   
+}
+.ball2{
+    animation: mantul 2s infinite;   
+}
+.ball3{
+    animation: mantul 1s infinite;   
+}
+.ball4{
+    animation: mantul 2s infinite;   
+}
+@keyframes mantul {
+    0%, 100%{
+        transform: translateY(20px);
+    }
+    50%{
+        transform: translateZ(-20px);
+        transform: scale(1.4);
+        width: 10px;
+    }
+}
+@keyframes gradient {
+    0%, 100%{
+        background-position: 100%;
+    }
+    50%{
+        background-position: 50%;
+    }
+    75%{
+        background-position: 75%;
+    }
+}
